@@ -2,8 +2,14 @@
 </script>
 
 <template>
-  <div></div>
+  <h1 class="teste">
+    teste
+  </h1>
 </template>
 
 <style scoped>
+  .teste {
+    background-color: aliceblue;
+    padding: 40px;
+  }
 </style>
