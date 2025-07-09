@@ -3,6 +3,9 @@
   <div id="nav">
     <ul>
       <li>
+        <router-link to="/about">About</router-link>
+      </li>
+      <li>
         <router-link to="/login"><button @click="logout">Logout</button></router-link>
       </li>
     </ul>

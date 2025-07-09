@@ -1,14 +1,18 @@
 import {
     createRouter,
     createWebHistory,
-    RouteRecordRaw,
-    NavigationGuardNext, 
-    RouteLocationNormalized 
 } from "vue-router";
 
-import Login from "@/pages/Login";
+import Login from "../view/Login.vue";
+import About from "../view/About.vue";
 
-const routes: Array<RouteRecordRaw> = [ 
+const routes = [
+  {
+    path: "/about",
+    name: "About",
+    component: About,
+    meta: { requiresAuth: true }
+  },  
   {
     path: '/login',
     name: 'Login',
@@ -22,13 +26,14 @@ const router = createRouter({
 });
 
 router.beforeEach((
-    to: RouteLocationNormalized,
-    from: RouteLocationNormalized,
-    next: NavigationGuardNext
+    to,
+    from,
+    next
 ) => {
 
   const token = localStorage.getItem('token');
   const isLoginRoute = to.path === '/login';
+  const requiresAuth = to.meta.requiresAuth
 
   if (!token && !isLoginRoute) {
     return next('/login');
