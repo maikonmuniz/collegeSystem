@@ -5,6 +5,7 @@ import {
 
 import Login from "../view/Login.vue";
 import About from "../view/About.vue";
+import AccountRegistration from "../view/AccountRegistration.vue";
 
 const routes = [
   {
@@ -12,7 +13,12 @@ const routes = [
     name: "About",
     component: About,
     meta: { requiresAuth: true }
-  },  
+  },
+  {
+    path: '/account',
+    name: 'AccountRegistration',
+    component: AccountRegistration
+  }, 
   {
     path: '/login',
     name: 'Login',
