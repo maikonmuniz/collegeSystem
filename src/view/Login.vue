@@ -47,27 +47,20 @@ const handleLogin = async () => {
 </script>
 
 <style scoped>
-
 .container {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(119, 189, 255);
-  padding: 5rem;
+  background-color: #2c3e50;
+  padding: 3rem;
   max-width: 400px;
-  margin: 0 auto;
-  box-shadow: 0.1px 0.1px 1px ;
+  margin: 5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
-label {
-  color: rgb(49, 49, 49);
-  font-size: 20px;
-}
-
-input {
-  padding: 0.5rem;
-  background-color: rgb(107, 183, 255);
-  border: none;
-  outline: none;
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
 }
 
 form > div {
@@ -76,4 +69,47 @@ form > div {
   margin-bottom: 1rem;
 }
 
+label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
+input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #34495e;
+  color: white;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #1abc9c;
+}
+
+button {
+  background-color: #e74c3c;
+  border: none;
+  padding: 0.75rem;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #16a085;
+}
+
+p {
+  margin-top: 1rem;
+  text-align: center;
+  color: #e74c3c;
+  font-weight: bold;
+}
 </style>
